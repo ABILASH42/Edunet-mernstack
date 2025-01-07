@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IES Online Store</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 80px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Buttons in header */
+        header button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        header button:hover {
+            background-color: #218838;
+        }
+
+        /* Search input */
+        header input[type="search"] {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        header input[type="search"]:focus {
+            border-color: #0066cc;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1,
+        section h2,
+        section h3,
+        section h4,
+        section h5,
+        section h6 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Emphasis text */
+        section b, section strong {
+            color: #000;
+        }
+
+        section i, section em {
+            font-style: italic;
+        }
+
+        section small {
+            font-size: 0.9rem;
+        }
+
+        section del {
+            color: red;
+        }
+
+        section mark {
+            background-color: yellow;
+        }
+
+        /* Buttons in sections */
+        section button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        section button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            nav button {
+                width: 100%;
+                padding: 12px;
+                margin-top: 5px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo1.png" alt="IES Online Store Logo">
+            <h1>IES <u>Online</u> Store</h1>
+        </div>
+        <div>
+            <button>Login</button>
+            <button>Signup</button>
+            <input type="search" placeholder="Search for <b>products</b>...">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html"><button>Home</button></a></li>
+            <li><a href="product.html"><button>Products</button></a></li>
+            <li><a href="shopping.html"><button>Shopping Cart</button></a></li>
+            <li><a href="product_cat.html"><button>Product Categories</button></a></li>
+            <li><a href="payment.html"><button>Payment</button></a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Welcome to <u>IES Online Store</u></h1>
+        <p>Welcome to the <strong>best online store</strong> for <mark>gadgets</mark> and <em>electronics</em>. We offer a wide variety of products that <b>cater to your everyday needs</b>. Whether it's the latest smartphone or a home appliance, we have it all.</p>
+    </section>
+
+    <section>
+        <h2><i>Featured Products</i></h2>
+        <p>Explore our <b>hand-picked</b> selection of <u>top-rated</u> products that are <strong>on sale</strong> for a limited time. Hurry before they're gone!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section>
+        <h3><mark>Special Discounts</mark></h3>
+        <p>Enjoy <del>huge discounts</del> on select items this season. Don't miss out on our <i>exclusive offers</i> just for you!</p>
+        <button>Get Offer</button>
+    </section>
+
+    <section>
+        <h4>Customer <b>Reviews</b></h4>
+        <p><i>“IES Online Store offers an amazing selection of products at unbeatable prices. I’m so happy with my purchases!”</i></p>
+        <blockquote><strong>John Doe</strong> – <em>Satisfied Customer</em></blockquote>
+        <button>Read More Reviews</button>
+    </section>
+
+    <section>
+        <h5>Contact <u>Customer Support</u></h5>
+        <p>If you have any questions or need help with an order, please don't hesitate to reach out to our <strong>friendly support team</strong> who are always ready to assist you.</p>
+        <button>Contact Support</button>
+    </section>
+
+    <section>
+        <h6>Follow Us on <mark>Social Media</mark></h6>
+        <p>Stay connected and get updates on the latest products and promotions by following us on:</p>
+        <ul>
+            <li><a href="#"><button>Facebook</button></a></li>
+            <li><a href="#"><button>Twitter</button></a></li>
+            <li><a href="#"><button>Instagram</button></a></li>
+        </ul>
+    </section>
+</body>
+</html>
