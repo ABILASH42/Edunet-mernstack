@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - IES Online Store</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 80px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Product Page Styling */
+        .product-page {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        .product-image {
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .product-info {
+            max-width: 600px;
+        }
+
+        .product-info h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .product-info p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .product-info button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-info button:hover {
+            background-color: #218838;
+        }
+
+        .product-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details h3 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .product-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-details li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-info {
+                max-width: 90%;
+                text-align: center;
+            }
+
+            .price {
+                font-size: 1.3rem;
+            }
+
+            .product-info button {
+                width: 100%;
+                padding: 12px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo1.png" alt="IES Online Store Logo">
+            <h1>IES <u>Online</u> Store</h1>
+        </div>
+        <div>
+            <button>Login</button>
+            <button>Signup</button>
+            <input type="search" placeholder="Search for products...">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html"><button>Home</button></a></li>
+            <li><a href="product.html"><button>Products</button></a></li>
+            <li><a href="shopping.html"><button>Shopping Cart</button></a></li>
+            <li><a href="product_cat.html"><button>Product Categories</button></a></li>
+            <li><a href="payment.html"><button>Payment</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="product-page">
+        <!-- Product Image Section -->
+        <div class="product-image">
+            <img src="product-image.jpg" alt="Product Image" style="width:100%; border-radius: 8px;">
+        </div>
+
+        <!-- Product Information Section -->
+        <div class="product-info">
+            <h2><strong>Wireless Bluetooth Headphones</strong></h2>
+            <p><b>Product Type:</b> Wireless Audio</p>
+            <p><b>Color:</b> Black with Silver Accents</p>
+            <p><i>High-quality sound for music lovers and noise-cancelling technology to enjoy your music on the go.</i></p>
+
+            <div class="price">$129.99</div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-details">
+        <h3>Product Features</h3>
+        <ul>
+            <li>Bluetooth 5.0 for seamless connectivity.</li>
+            <li>Noise cancellation technology for clear sound.</li>
+            <li>Up to 20 hours of battery life on a single charge.</li>
+            <li>Ergonomic design with memory foam ear cups.</li>
+            <li>Built-in microphone for hands-free calling.</li>
+        </ul>
+
+        <h3>Product Specifications</h3>
+        <ul>
+            <li><b>Brand:</b> IES</li>
+            <li><b>Model:</b> IES-BT500</li>
+            <li><b>Dimensions:</b> 7.5 x 6.3 x 3.2 inches</li>
+            <li><b>Weight:</b> 0.5 lbs</li>
+            <li><b>Battery Life:</b> Up to 20 hours</li>
+        </ul>
+    </div>
+
+</body>
+</html>

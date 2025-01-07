@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - IES Online Store</title>
+    <style>
+        /* General Reset and Body Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 80px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Shopping Cart Section */
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .cart-item {
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .cart-item h3 {
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+
+        .cart-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .cart-item input {
+            width: 50px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .cart-item button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-item button:hover {
+            background-color: #c82333;
+        }
+
+        .total-container {
+            background-color: white;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .total-container h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .checkout-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cart-container {
+                width: 90%;
+            }
+
+            .total-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo1.png" alt="IES Online Store Logo">
+            <h1>IES <u>Online</u> Store</h1>
+        </div>
+        <div>
+            <button>Login</button>
+            <button>Signup</button>
+            <input type="search" placeholder="Search for products...">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html"><button>Home</button></a></li>
+            <li><a href="product.html"><button>Products</button></a></li>
+            <li><a href="shopping.html"><button>Shopping Cart</button></a></li>
+            <li><a href="payment.html"><button>Payment</button></a></li>
+            <li><a href="product_cat.html"><button>Categories</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div>
+                <h3>Product 1</h3>
+                <p>$49.99</p>
+            </div>
+            <input type="number" value="1" min="1">
+            <button>Remove</button>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="cart-item">
+            <img src="product2.jpg" alt="Product 2">
+            <div>
+                <h3>Product 2</h3>
+                <p>$29.99</p>
+            </div>
+            <input type="number" value="2" min="1">
+            <button>Remove</button>
+        </div>
+
+        <!-- Cart Item 3 -->
+        <div class="cart-item">
+            <img src="product3.jpg" alt="Product 3">
+            <div>
+                <h3>Product 3</h3>
+                <p>$19.99</p>
+            </div>
+            <input type="number" value="1" min="1">
+            <button>Remove</button>
+        </div>
+
+        <div class="total-container">
+            <h2>Total: $149.96</h2>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
