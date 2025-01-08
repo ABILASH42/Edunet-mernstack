@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .image-container {
+            position: relative;
+        }
+        /* .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        } */
+
+        .image-container div {
+            width: 30%;
+            margin-bottom: 10px;
+        }
+
+        #div1 {
+            border: 2px solid #ff5733;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #eaf4f7;
+            position: absolute;
+            margin-left: 1030px;
+        }
+
+        #div2 {
+            border: 2px dotted #33c4ff;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #eaf7f4;
+            position: absolute;
+            margin-left: 510px;
+        }
+
+        #div3 {
+            border: 2px dashed #28a745;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #eaf7e1;
+        }
+
+        #div4 {
+            border: 4px double #ff9900;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f7eaf4;
+            position: absolute;
+            margin-left: 1030px;
+        }
+
+        #div5 {
+            border: 4px groove #ff0066;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f7e1e4;
+            position: absolute;
+            margin-left: 510px;
+        }
+
+        #div6 {
+            border: 4px ridge #9900cc;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f4eaf7;
+           
+        }
+
+        #div7 {
+            border: 4px inset #0099cc;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #e1f7f7;
+            position: absolute;
+            margin-left: 1030px;
+        }
+
+        #div8 {
+            border: 4px outset #ff3300;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f4eaf4;
+            position: absolute;
+            margin-left: 510px;
+        }
+
+        #div9 {
+            border: 2px hidden #ff6699;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f7eaf1;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <div id="div1">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTD8kvsEFlVrnJ5_1zTxYNpCCZTEfMrp0ZEllv5EycGNxF2xzAhaHZe3q_J7y3x2Yh8q-CQeFNSjD7YmwumiHY1UGvqvbAiqUs1STf9Njvp" alt="Image 1">
+        </div>
+        <div id="div2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXrKSJcC6twlWauZasCPb2xWzzYi_yNrrYVDFPblD_GkXnuBh62_VDd9vO-7XiTNF0HBDXy7wGwfvXWdi4kePWCiKVLpZ9iKyJq3e-jxj5A" alt="Image 2">
+        </div>
+        <div id="div3">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdDLOeaPffIMnadlw31E36_KGqXhUPTPLGBr2ueXhqn88riWBN1UHKhmW05vFHryEIGQKvMxp5bdFznXtWpLplc4bkiP8rltzzmrtmd-ZD" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div id="div4">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTD8kvsEFlVrnJ5_1zTxYNpCCZTEfMrp0ZEllv5EycGNxF2xzAhaHZe3q_J7y3x2Yh8q-CQeFNSjD7YmwumiHY1UGvqvbAiqUs1STf9Njvp" alt="Image 1">
+        </div>
+        <div id="div5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXrKSJcC6twlWauZasCPb2xWzzYi_yNrrYVDFPblD_GkXnuBh62_VDd9vO-7XiTNF0HBDXy7wGwfvXWdi4kePWCiKVLpZ9iKyJq3e-jxj5A" alt="Image 2">
+        </div>
+        <div id="div6">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdDLOeaPffIMnadlw31E36_KGqXhUPTPLGBr2ueXhqn88riWBN1UHKhmW05vFHryEIGQKvMxp5bdFznXtWpLplc4bkiP8rltzzmrtmd-ZD" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div id="div7">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTD8kvsEFlVrnJ5_1zTxYNpCCZTEfMrp0ZEllv5EycGNxF2xzAhaHZe3q_J7y3x2Yh8q-CQeFNSjD7YmwumiHY1UGvqvbAiqUs1STf9Njvp" alt="Image 1">
+        </div>
+        <div id="div8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXrKSJcC6twlWauZasCPb2xWzzYi_yNrrYVDFPblD_GkXnuBh62_VDd9vO-7XiTNF0HBDXy7wGwfvXWdi4kePWCiKVLpZ9iKyJq3e-jxj5A" alt="Image 2">
+        </div>
+        <div id="div9">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdDLOeaPffIMnadlw31E36_KGqXhUPTPLGBr2ueXhqn88riWBN1UHKhmW05vFHryEIGQKvMxp5bdFznXtWpLplc4bkiP8rltzzmrtmd-ZD" alt="Image 3">
+        </div>
+    </div>
+
+</body>
+</html>

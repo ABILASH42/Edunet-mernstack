@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #0072ff;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .app-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffd700;
+}
+
+/* Task Panel */
+.task-panel {
+    padding: 1.5rem;
+    background: white;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    padding: 0.5rem 0;
+}
+
+.task.overdue {
+    color: red;
+    font-style: italic;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Calendar Section */
+.calendar {
+    padding: 1.5rem;
+    background: white;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-dates span {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.highlight-date {
+    background: #ffd700;
+    color: black;
+}
+
+/* Collaboration Section */
+.collaboration {
+    padding: 1.5rem;
+    background: white;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message {
+    padding: 0.8rem;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.chat-message.alternate {
+    background-color: #e7f1ff;
+}
+
+/* Footer Section */
+.footer {
+    background: #0072ff;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

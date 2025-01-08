@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CSS Styling Example</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        #main-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ffffff;
+            padding: 1rem;
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            margin: 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            color: #0072ff;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #e7f1ff;
+        }
+        .card {
+            background: #fff;
+            margin: 20px auto;
+            padding: 1.5rem;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-title">Welcome to Professional CSS Styling</h1>
+    </header>
+
+    <section class="card">
+        <h2>Inline CSS Example</h2>
+        <p style="color: #444; font-size: 1.1rem;">
+            This text uses <span style="font-weight: bold; text-decoration: underline;">inline CSS</span> to style individual elements directly.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Internal CSS Example</h2>
+        <p class="highlight">
+            This paragraph is styled with a <b>class selector</b> in the <b>internal CSS</b>. It has a highlighted appearance.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>External CSS Example</h2>
+        <p>
+            This text is styled using the <b>external CSS file</b>. Check the styles for more clean and reusable CSS definitions.
+        </p>
+    </section>
+
+    <footer>
+        <p>Designed with <b>inline</b>, <b>internal</b>, and <b>external CSS</b> for demonstration purposes. &copy; 2025</p>
+    </footer>
+</body>
+</html>
