@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .day-header {
+            font-weight: bold;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .weekend {
+            color: #d9534f; /* Red for weekends */
+        }
+
+        .weekday {
+            color: #5bc0de; /* Blue for weekdays */
+        }
+
+        .date {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .today {
+            background-color: #ffc107; /* Highlight today's date */
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Calendar</h1>
+    <div class="calendar" id="calendar"></div>
+
+    <script>
+        function createCalendar() {
+            const calendarElement = document.getElementById("calendar");
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = today.getMonth();
+            const currentDate = today.getDate();
+
+            // Get the first day of the month
+            const firstDay = new Date(year, month, 1).getDay();
+
+            // Get the total days in the month
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Weekday labels
+            const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            
+            // Add day headers
+            daysOfWeek.forEach((day, index) => {
+                const dayElement = document.createElement("div");
+                dayElement.textContent = day;
+                dayElement.className = "day-header " + (index === 0 || index === 6 ? "weekend" : "weekday");
+                calendarElement.appendChild(dayElement);
+            });
+
+            // Add empty blocks for days before the first of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement("div");
+                calendarElement.appendChild(emptyCell);
+            }
+
+            // Add day numbers
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement("div");
+                dayElement.textContent = day;
+                dayElement.className = "date";
+
+                // Highlight today
+                if (day === currentDate) {
+                    dayElement.classList.add("today");
+                }
+
+                // Style weekends
+                const dayOfWeek = new Date(year, month, day).getDay();
+                if (dayOfWeek === 0 || dayOfWeek === 6) {
+                    dayElement.classList.add("weekend");
+                } else {
+                    dayElement.classList.add("weekday");
+                }
+
+                calendarElement.appendChild(dayElement);
+            }
+        }
+
+        // Initialize the calendar
+        createCalendar();
+    </script>
+</body>
+</html>
