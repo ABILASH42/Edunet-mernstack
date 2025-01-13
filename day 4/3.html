@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Base Styling */
+    body {
+      background: linear-gradient(135deg, #0b0d17, #171a24);
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+    }
+    .container {
+      margin-top: 50px;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    .nav-link {
+      color: #bbb;
+    }
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    /* Card Styling */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .card-body {
+      padding: 30px;
+    }
+    .btn-primary {
+      background: #0077ff;
+      border: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #0056d4;
+    }
+
+    /* Task List Styling */
+    .list-group-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .list-group-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.02);
+    }
+    .btn-danger {
+      background: #ff4d4d;
+      border: none;
+      transition: background 0.3s ease;
+    }
+    .btn-danger:hover {
+      background: #d90000;
+    }
+
+    /* Checkbox Styling */
+    input[type="checkbox"] {
+      accent-color: #0077ff;
+    }
+
+    /* Footer Section */
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #bbb;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Task Manager</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tasks</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Task Form -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <form id="taskForm">
+          <div class="form-group">
+            <label for="taskInput">Task Name</label>
+            <input type="text" class="form-control" id="taskInput" placeholder="Enter task name">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Add Task</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul class="list-group" id="taskList"></ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    blip.............................................
+  </footer>
+
+  <script>
+    document.getElementById('taskForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const taskInput = document.getElementById('taskInput');
+      const taskName = taskInput.value.trim();
+      if (taskName === '') {
+        alert('Task name cannot be empty');
+        return;
+      }
+      addTask(taskName);
+      taskInput.value = '';
+    });
+
+    function addTask(taskName) {
+      const taskList = document.getElementById('taskList');
+      const taskItem = document.createElement('li');
+      taskItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+      taskItem.innerHTML = `
+        <span>
+          <input type="checkbox" class="mr-2" onclick="toggleTaskCompletion(this)">
+          ${taskName}
+        </span>
+        <button class="btn btn-danger btn-sm" onclick="deleteTask(this)">Delete</button>
+      `;
+      taskList.appendChild(taskItem);
+    }
+
+    function deleteTask(button) {
+      const taskItem = button.parentElement;
+      taskItem.remove();
+    }
+
+    function toggleTaskCompletion(checkbox) {
+      const taskName = checkbox.nextElementSibling;
+      if (checkbox.checked) {
+        taskName.style.textDecoration = 'line-through';
+        taskName.style.color = '#aaa';
+      } else {
+        taskName.style.textDecoration = 'none';
+        taskName.style.color = '#fff';
+      }
+    }
+  </script>
+</body>
+</html>
